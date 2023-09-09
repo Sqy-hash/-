@@ -8,7 +8,7 @@ const route = useRoute()
 const categoryDate = ref({})
 const getCategoryDate = async() => { 
   const res = await getCategoryFilterAPI(route.params.id)
-  categoryDate.value = res.data.result
+  categoryDate.value = res.result
 }
 onMounted(() => {
   getCategoryDate()
@@ -24,7 +24,7 @@ const reqDate = ref({
 })
 const getGoodList = async() => { 
   const res = await getSubCategoryAPI(reqDate.value)
-  goodList.value = res.data.result.items
+  goodList.value = res.result.items
 }
 onMounted(() => {
   getGoodList()
@@ -41,7 +41,7 @@ const load = async () => {
   const res = await getSubCategoryAPI(reqDate.value)
   // 使用展开运算符获取新的数据
   console.log(res);
-  goodList.value = [...goodList.value, ...res.data.result.items]
+  goodList.value = [...goodList.value, ...res.result.items]
   // 加载完毕停止监听
   if (res.result.items.length === 0) { 
     disabled.value= true

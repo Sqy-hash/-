@@ -9,7 +9,7 @@ export function usrBanner() {
     const res = await getBannerAPI({
       distributionSite:'2'
     })
-    BannerList.value = res.data.result
+    BannerList.value = res.result
   }
   onMounted(() => {
     getBannerList()

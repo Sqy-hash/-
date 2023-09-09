@@ -8,7 +8,7 @@ export const useCategoryStore = defineStore('category', () => {
   // action获取导航列表数据的方法
   const getCategory = async () => {
     const res = await getCategoryAPI()
-    categoryList.value = res.data.result
+    categoryList.value = res.result
   }
   return {
     getCategory,

@@ -9,7 +9,7 @@ const categoryDate = ref({})
 const route = useRoute()
 const getCategory = async(id = route.params.id) => { 
   const res = await getCategoryAPI(id)
-  categoryDate.value = res.data.result
+  categoryDate.value = res.result
 }
 onMounted(() => getCategory())
   //路由参数变化的时候，可将数据重新发送  to为一个最新的数值参数

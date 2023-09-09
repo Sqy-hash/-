@@ -4,11 +4,11 @@ import { getGoodsAPI } from '@/apis/home'
 import { onMounted, ref } from 'vue';
 import GoodsItem from './GoodsItem.vue';
 
+
 const goodsProduct = ref([])
 const getGoods = async () => { 
   const res = await getGoodsAPI()
-  console.log(res);
-  goodsProduct.value = res.data.result
+  goodsProduct.value = res.result
 }
 onMounted(() => { 
   getGoods()
@@ -22,7 +22,7 @@ onMounted(() => {
         <RouterLink class="cover" to="/">
           <img v-img-lazy="cate.picture" />
           <strong class="label">
-            <span>{{ cate.name }}馆</span>
+            <span>{{ cate.name }}</span>
             <span>{{ cate.saleInfo }}</span>
           </strong>
         </RouterLink>
