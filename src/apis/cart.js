@@ -1,10 +1,10 @@
-import request from '@/utils/http.js'
+import request from '@/utils/http'
 
 //加入购物车
 export const inserCartAPI = ({ skuId, count }) => {
   return request({
     url: '/member/cart',
-    methos: 'POST',
+    method: 'POST',
     data: {
       skuId,
       count
@@ -15,7 +15,7 @@ export const inserCartAPI = ({ skuId, count }) => {
 export const findNewCartListAPI = () => {
   return request({
     url: '/member/cart',
-    
+    method: 'GET'
   }) 
 }
 // 删除购物车
@@ -26,5 +26,13 @@ export const DelCartAPI = (ids) => {
     data: {
       ids
     }
+  })
+}
+//合并购物车
+export const mergeCartAPI = (data) => { 
+  return request({
+    url: '/member/cart/merge',
+    method: 'POST',
+    data
   })
 }

@@ -1,13 +1,13 @@
 import axios from 'axios'
 import { ElMessage } from 'element-plus'
 import 'element-plus/theme-chalk/el-message.css'
-import { useUserStore } from '@/stores/userStore'
+import { useUserStore } from '@/stores/user'
 import router from '@/router'
 
 // 创建一个axios的实例
 const httpInstance = axios.create({
   baseURL: 'http://pcapi-xiaotuxian-front-devtest.itheima.net',
-  timeout: 50000
+  timeout: 5000
 })
 
 // 添加请求拦截器
