@@ -13,6 +13,7 @@ app.directive('img-lazy', {
         // console.log(isIntersecting)
         if (isIntersecting) { 
           el.src = binding.value
+          
           stop()
         }
       },
