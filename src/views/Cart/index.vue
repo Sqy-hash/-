@@ -112,6 +112,7 @@ const allCheck = (selected) => {
           text-align: left;
           padding-left: 30px;
           color: #999;
+        
         }
       }
 

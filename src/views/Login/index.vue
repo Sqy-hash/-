@@ -33,7 +33,7 @@ const rules = ref({
 const userStore = useUserStore()
 // 获取form实例做统一的校验
 const formRef = ref(null)
- const router = useRouter()
+const router = useRouter()
 const doLogin = () => { 
   // 对上面的form的数据进行解构
 const {account,password } = form.value
